@@ -1,5 +1,11 @@
 export class Doller {
-  constructor(public amount: number = 10) {}
+	public amount: number;
 
-  public times(multiplier: number) {}
+	constructor(amount: number) {
+		this.amount = amount;
+	}
+
+	public times(multiplier: number) {
+		this.amount *= multiplier;
+	}
 }
