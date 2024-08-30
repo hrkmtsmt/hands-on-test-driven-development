@@ -1,0 +1,15 @@
+{
+	"name": "hands-on-test-driven-development",
+	"module": "main.ts",
+	"type": "module",
+	"scripts": {
+		"format": "bunx biome format --write"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "1.8.3",
+		"@types/bun": "latest"
+	},
+	"peerDependencies": {
+		"typescript": "5.0.0"
+	}
+}
