@@ -1,3 +1,3 @@
 export function main() {
-	return 'Hello Test-Driven Development!';
+	return "Hello Test-Driven Development!";
 }

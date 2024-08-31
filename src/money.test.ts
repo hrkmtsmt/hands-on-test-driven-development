@@ -1,5 +1,5 @@
-import { describe, test, expect } from 'bun:test';
-import { Doller } from './doller';
+import { describe, test, expect } from "bun:test";
+import { Doller } from "./doller";
 
 /**
  * TODO
@@ -9,21 +9,22 @@ import { Doller } from './doller';
  * - [ ] amountをprivateにする
  * - [x] Dollerの副作用をどうする?
  * - [ ] Moneyの丸め処理をどうする?
- * - [ ] 📍 equals()
+ * - [x] equals()
  * - [ ] hashCode()
  */
-describe('Money', () => {
-	test('掛け算', () => {
-		const five = new Doller(5);
+describe("Money", () => {
+  test("掛け算", () => {
+    const five = new Doller(5);
 
-		let product = five.times(2);
-		expect(product.amount).toBe(10);
+    let product = five.times(2);
+    expect(product.amount).toBe(10);
 
-		product = five.times(3);
-		expect(product.amount).toBe(15);
-	});
+    product = five.times(3);
+    expect(product.amount).toBe(15);
+  });
 
-	test('新しく生成されたインスタンスのamountが同じか比較する', () => {
-		expect(new Doller(5).equals(new Doller(5))).toBe(true);
-	});
+  test("新しく生成されたインスタンスのamountが同じか比較する", () => {
+    expect(new Doller(5).equals(new Doller(5))).toBe(true);
+    expect(new Doller(5).equals(new Doller(6))).toBe(false);
+  });
 });
