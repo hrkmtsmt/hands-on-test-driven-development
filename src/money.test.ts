@@ -9,6 +9,8 @@ import { Doller } from './doller';
  * - [ ] amountをprivateにする
  * - [x] Dollerの副作用をどうする?
  * - [ ] Moneyの丸め処理をどうする?
+ * - [ ] 📍 equals()
+ * - [ ] hashCode()
  */
 describe('Money', () => {
 	test('掛け算', () => {
@@ -19,5 +21,9 @@ describe('Money', () => {
 
 		product = five.times(3);
 		expect(product.amount).toBe(15);
+	});
+
+	test('新しく生成されたインスタンスのamountが同じか比較する', () => {
+		expect(new Doller(5).equals(new Doller(5))).toBe(true);
 	});
 });
