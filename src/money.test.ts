@@ -7,13 +7,15 @@ import { Doller } from './doller';
  * - [ ] $5 + 10CHF = $10 (レートが2:1の場合)
  * - [x] $5 * 2 = $10
  * - [ ] amountをprivateにする
- * - [ ] Dollerの副作用をどうする?
+ * - [ ] 📍 Dollerの副作用をどうする?
  * - [ ] Moneyの丸め処理をどうする?
  */
 describe('Money', () => {
 	test('$5 * 2 = 10になる', () => {
-		const five = new Doller(5);
-		five.times(2);
-		expect(five.amount).toBe(10);
+		const product = new Doller(5);
+		product.times(2);
+		expect(product.amount).toBe(10);
+		product.times(3);
+		expect(product.amount).toBe(15);
 	});
 });
